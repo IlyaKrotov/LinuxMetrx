@@ -4,7 +4,7 @@
 # and cpu                                               #
 #########################################################
 
-def readStatsTo(resFile, isOverload):
+def readStatsTo(resFile):
 
 	devices, buff, stats, d_stats = [], [], {}, {}
 	cnt = 0
@@ -122,7 +122,6 @@ def readStatsTo(resFile, isOverload):
 			strForWrite = strForWrite + str(float(d_stats.values()[i])) + " "
 		for j in xrange(len(stats.values())):
 			strForWrite = strForWrite + str(float(stats.values()[j])) + " "
-		strForWrite += str(float(isOverload))
 		strForWrite += "\n"
 		rfile.write(strForWrite)
 		rfile.close()
